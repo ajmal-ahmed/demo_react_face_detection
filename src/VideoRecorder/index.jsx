@@ -15,15 +15,21 @@ const VideoRecorder = () => {
 
     useEffect(() => {
         const loadModels = async () => {
+            const id = toast.loading("Loading Dependencies, Please wait...")
             const MODEL_URL = '/models';
             Promise.all([
                 faceapi.nets.tinyFaceDetector.loadFromUri(MODEL_URL),
                 faceapi.nets.faceLandmark68Net.loadFromUri(MODEL_URL),
                 faceapi.nets.faceRecognitionNet.loadFromUri(MODEL_URL),
                 faceapi.nets.faceExpressionNet.loadFromUri(MODEL_URL),
-            ]).then(setModelsLoaded(true));
+            ]).then(()=>{
+                setModelsLoaded(true)
+                toast.update(id, { render: "Dependencies loaded", type: "success", isLoading: false });
+            });
         }
         loadModels();
+
+
     }, []);
 
 
