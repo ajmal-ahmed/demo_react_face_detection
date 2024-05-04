@@ -11,3 +11,6 @@
 - Run `npm install` to install the dependencies
 - Run `npm run dev` to start the development server
 - Open `http://localhost:3000` in your browser
+
+# Demo
+https://face-detection-reactjs.netlify.app/
