@@ -13,4 +13,4 @@
 - Open `http://localhost:3000` in your browser
 
 # Demo
-https://face-detection-reactjs.netlify.app/
+https://video-filter-reactjs.netlify.app/
