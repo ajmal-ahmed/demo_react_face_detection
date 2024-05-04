@@ -24,7 +24,7 @@ const VideoRecorder = () => {
                 faceapi.nets.faceExpressionNet.loadFromUri(MODEL_URL),
             ]).then(()=>{
                 setModelsLoaded(true)
-                toast.update(id, { render: "Dependencies loaded", type: "success", isLoading: false });
+                toast.update(id, { render: "Dependencies loaded", type: "success", isLoading: false, autoClose: 2000});
             });
         }
         loadModels();
